@@ -2,6 +2,9 @@ package controllers;
 
 import views.ShowConsole;
 
+import models.Persona;
+
+
 public class MetodosBusqueda {
 
     private ShowConsole showConsole;
@@ -60,4 +63,36 @@ public class MetodosBusqueda {
         }
         return null ;
     }
+
+    public Persona busPersonByName(Persona[] personas, String name){
+        for(Persona persona : personas){
+            if (persona.getName().equals(name)) 
+                return persona;
+        }return null;
+        
+
+    }
+
+    public Persona findPersonaByAgeAndImpar(Persona[] personas, int age){
+        for(Persona persona : personas){
+            if (persona.getAge()> age && persona.getAge()%2==1) 
+               return persona;
+        }return null;
+
+    }
+
+    public Persona findPersonaByValueName(Persona[] personas,int i){
+        for(Persona persona : personas){
+            int valorNombre = 0;
+            for(char letra: persona.getName().toCharArray()){
+                int intvalorLetra = (int) letra;
+                valorNombre += (int) intvalorLetra;
+            }
+            if(valorNombre==i){
+                return persona;
+            }
+        }return null;
+    }
+
+
 }

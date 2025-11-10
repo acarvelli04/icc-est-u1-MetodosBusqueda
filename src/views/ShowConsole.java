@@ -1,5 +1,5 @@
 package views;
-
+import models.Persona;
 //import com.sun.jdi.Value;
 
 public class ShowConsole {
@@ -30,6 +30,24 @@ public class ShowConsole {
             System.out.println("Error--> No se encontro el numero: " + value);
         }else{
             System.out.println("Se encontro el numero" + value +  " en la posicion: " + (resul4+1));
+        }
+    }
+
+    public void showPersonResult(Persona resultadoPer,String name){
+        if (resultadoPer == null) {
+            System.out.println("Error--> No se encontro la persona " + name);
+        } else {
+            System.out.println("Se encontro la persona: " + name);
+
+        }
+    }
+
+    public void showPersonResult2(Persona resultadoPer,int age){
+        if (resultadoPer == null) {
+            System.out.println("Error--> No se encontro la persona " + age);
+        } else {
+            System.out.println("Se encontro la persona: " + age);
+
         }
     }
 }
