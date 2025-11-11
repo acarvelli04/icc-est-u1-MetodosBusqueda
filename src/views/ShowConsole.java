@@ -50,4 +50,19 @@ public class ShowConsole {
 
         }
     }
+
+    public void showPersonResult3(Persona resultadoPer,int value, boolean valorNombre){
+        if (resultadoPer == null) {
+            System.out.println("Error--> No se encontro la persona con el valor: " + value);
+        } else {
+            if (valorNombre) {
+                System.out.println("Se encontro la persona con el valor en el nombre: " + value + " La persona es: " + resultadoPer.getName());
+            } else {
+                System.out.println("Se encontro la persona con el valor en la edad: " + value);
+            }
+
+        }
+    }
+
+
 }

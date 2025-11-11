@@ -30,5 +30,7 @@ public class App {
 
         
         Persona resulPersona3 =mBusqueda1.findPersonaByValueName(personas, 498);
+        boolean valorNombre = true;
+        showConsole.showPersonResult3(resulPersona3, 498, valorNombre);
     }
 }
